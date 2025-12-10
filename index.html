@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/src/index.css">
+  <title>Placar Simples 2 Times</title>
+</head>
+
+<body class=" flex flex-col items-center min-h-screen 
+bg-neutral-900 bg-gradient-to-r from-neutral-950 via-neutral-900 
+to-slate-900 text-white px-4 md:px-8 lg:px-12 py-6 md:py-10 lg:py-16 antialiased">
+
+  <div class="">
+    <!-- TIME A -->
+    <div>
+      <h2>Time A</h2>
+      <h3 id="placarA">0</h3>
+
+      <button class="add-fixed" data-team="A" data-value="1">+1</button>
+      <button class="add-fixed" data-team="A" data-value="2">+2</button>
+      <button class="add-fixed" data-team="A" data-value="3">+3</button>
+      <button class="add-fixed" data-team="A" data-value="4">+4</button>
+      <button class="add-fixed" data-team="A" data-value="5">+5</button>
+
+      <br><br>
+
+      <input type="number" id="valorLivreA" placeholder="Valor livre">
+      <button class="add-free" data-team="A">Adicionar valor livre</button>
+
+      <br><br>
+
+      <button class="remove-one" data-team="A">-1</button>
+    </div>
+
+    <button id="resetTudo">Reiniciar Placar</button>
+
+    <!-- TIME B -->
+    <div>
+      <h2>Time B</h2>
+      <h3 id="placarB">0</h3>
+
+      <button class="add-fixed" data-team="B" data-value="1">+1</button>
+      <button class="add-fixed" data-team="B" data-value="2">+2</button>
+      <button class="add-fixed" data-team="B" data-value="3">+3</button>
+      <button class="add-fixed" data-team="B" data-value="4">+4</button>
+      <button class="add-fixed" data-team="B" data-value="5">+5</button>
+
+      <br><br>
+
+      <input type="number" id="valorLivreB" placeholder="Valor livre">
+      <button class="add-free" data-team="B">Adicionar valor livre</button>
+
+      <br><br>
+
+      <button class="remove-one" data-team="B">-1</button>
+    </div>
+  </div>
+
+  <script src="/src/scripts/script.js"></script>
+</body>
+
+</html>

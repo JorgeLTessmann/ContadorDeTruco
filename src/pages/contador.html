@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="src/index.css">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>contadortruco</title>
+</head>
+
+<body class="bg-gray-950 font-roboto">
+
+  <main class="contador-container flex items-center mt-4 flex-col w-full h-auto md:mt-16">
+    <h1 class="text-[60px] mb-16 text-neutral-50">Placar de Pontos</h1>
+
+    <div class="placares grid grid-flow-col grid-col-3 gap-40 h-full">
+
+      <!-- TIME A -->
+      <div class="time-placar flex bg-purple-500 w-md h-120 items-center justify-center text-neutral-50 rounded-2xl flex-col hover:bg-purple-600">
+        <h2 class="">Time A</h2>
+        <span id="pontosTimeA" class="pontuacao">0</span>
+
+        <!-- Botões -->
+        <div class="botoes-ponto flex flex-col gap-2">
+
+          <button onclick="adicionarPonto('A', 1)">+1 Ponto</button>
+
+          <select id="selectA" class="text-black">
+            <option value="2">+2 Pontos</option>
+            <option value="3">+3 Pontos</option>
+            <option value="5">+5 Pontos</option>
+          </select>
+
+          <button onclick="adicionarPonto('A', parseInt(document.getElementById('selectA').value))">Adicionar Selecionado</button>
+
+          <button onclick="removerPonto('A')">-1 Ponto</button>
+
+        </div>
+      </div>
+
+      <!-- CENTRO -->
+      <div class="flex flex-col bg-gray-700">
+        <button onclick="igualarPlacar()" class="text-neutral-50 bg-gray-800 w-40 h-10">Igualar Pontos</button><br>
+        <button id="reset-btn" onclick="resetarPlacar()" class="text-neutral-50 bg-gray-800 w-40 h-10">Reiniciar Placar</button>
+      </div>
+
+      <!-- TIME B -->
+      <div class="time-placar flex bg-blue-600 w-md h-120 items-center justify-center text-neutral-50 flex-col rounded-2xl hover:bg-blue-700">
+        <h2>Time B</h2>
+        <span id="pontosTimeB" class="pontuacao">0</span>
+
+        <div class="botoes-ponto flex flex-col gap-2">
+
+          <button onclick="adicionarPonto('B', 1)">+1 Ponto</button>
+
+          <select id="selectB" class="text-black">
+            <option value="2">+2 Pontos</option>
+            <option value="3">+3 Pontos</option>
+            <option value="5">+5 Pontos</option>
+          </select>
+
+          <button onclick="adicionarPonto('B', parseInt(document.getElementById('selectB').value))">Adicionar Selecionado</button>
+
+          <button onclick="removerPonto('B')">-1 Ponto</button>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="src/scripts/script.js"></script>
+</body>
+
+</html>
