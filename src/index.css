@@ -1,4 +1,28 @@
 @import "tailwindcss";
+
 @theme {
   --color-card: hsl(25 25% 18%);
+  --color-primary: hsl(30 50% 35%);
+  --color-primary-foreground: hsl(35 40% 90%);
+  --color-background: hsl(25 30% 12%);
+
+  --color-border: hsl(25 20% 25%);
+  --color-foreground: hsl(35 40% 90%);
+  --color-muted: hsl(25 15% 22%);
+  --color-muted-foreground: hsl(30 20% 60%);
+  --color-destructive: hsl(0 40% 40%);
+}
+
+@layer components {
+  .meu-card {
+    @apply bg-card/50 p-4 mb-6 rounded-xl text-center;
+  }
+
+  .add-fixed {
+    @apply px-4 py-2 m-1 bg-primary hover:bg-primary/80 text-primary-foreground rounded-lg text-lg font-semibold transition-colors duration-200;
+  }
+
+  .valor-livre {
+    @apply w-28 px-3 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground;
+  }
 }

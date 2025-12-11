@@ -7,15 +7,16 @@
   <title>Placar Simples 2 Times</title>
 </head>
 
-<body class="bg-[radial-gradient(circle_at_center,hsl(25_25%_20%)_0%,hsl(25_30%_8%)_100%)] flex items-center justify-center p4 min-h-screen">
+<body
+  class="bg-[radial-gradient(circle_at_center,hsl(25_25%_20%)_0%,hsl(25_30%_8%)_100%)] flex items-center justify-center p4 min-h-screen">
 
 
   <div class="max-w-md w-full p-8 md:p-6 card rounded-2xl shadow-2xl
-  grid grid-cols-1 md:grid-cols-2 gap-4">
+  grid grid-cols-1 md:grid-cols-2 gap-4 border border-border">
     <!-- TIME A -->
-    <div class="bg-card/50">
-      <h2>Time A</h2>
-      <h3 id="placarA">0</h3>
+    <div class="meu-card">
+      <h2 class="text-2xl font-bold text-foreground mb-2 tracking-wide">Time A</h2>
+      <h3 id="placarA" class="text-7xl font-extrabold text-accent my-4">0</h3>
 
       <button class="add-fixed" data-team="A" data-value="1">+1</button>
       <button class="add-fixed" data-team="A" data-value="2">+2</button>
@@ -25,20 +26,20 @@
 
       <br><br>
 
-      <input type="number" id="valorLivreA" placeholder="Valor livre">
-      <button class="add-free" data-team="A">Adicionar valor livre</button>
+      <input type="number" id="valorLivreA" placeholder="Valor livre" class="valor-livre">
+      <button class="add-fixed ml-2" data-team="A">Adicionar valor livre</button>
 
       <br><br>
 
-      <button class="remove-one" data-team="A">-1</button>
+      <button class="add-fixed" data-team="A">-1</button>
     </div>
 
 
 
     <!-- TIME B -->
-    <div class="bg-card/50">
-      <h2>Time B</h2>
-      <h3 id="placarB">0</h3>
+    <div class="meu-card">
+      <h2 class="text-2xl font-bold text-foreground mb-2 tracking-wide">Time B</h2>
+      <h3 id="placarB" class="text-7xl font-extrabold text-accent my-4">0</h3>
 
       <button class="add-fixed" data-team="B" data-value="1">+1</button>
       <button class="add-fixed" data-team="B" data-value="2">+2</button>
@@ -48,14 +49,15 @@
 
       <br><br>
 
-      <input type="number" id="valorLivreB" placeholder="Valor livre">
-      <button class="add-free" data-team="B">Adicionar valor livre</button>
+      <input type="number" id="valorLivreB" placeholder="Valor livre" class="valor-livre">
+      <button class="add-fixed ml-2" data-team="B">Adicionar valor livre</button>
 
       <br><br>
 
-      <button class="remove-one" data-team="B">-1</button>
+      <button class="add-fixed" data-team="B">-1</button>
     </div>
-    <button id="resetTudo">Reiniciar Placar</button>
+    <button id="resetTudo" class="add-fixed bg-muted hover:bg-destructive mx-auto col-span-full">Reiniciar
+      Placar</button>
   </div>
 
   <script src="/src/scripts/script.js"></script>
